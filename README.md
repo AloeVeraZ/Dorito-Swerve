@@ -94,9 +94,9 @@ The first prototype demonstrates the project's core ideas:
 
 Click a thumbnail to watch the original project video on YouTube.
 
-| Prototype demo 1 | Prototype demo 2 | Prototype demo 3 |
+| Full-length project explanation | Prototype demo 2 | Prototype demo 3 |
 |:---:|:---:|:---:|
-| [![Dorito prototype video 1](docs/assets/demo-kinematics.webp)](https://www.youtube.com/watch?v=B4kNNsTJaLg) | [![Dorito prototype video 2](docs/assets/demo-steering.webp)](https://www.youtube.com/watch?v=usliYLL-PGs) | [![Dorito prototype video 3](docs/assets/demo-drive.webp)](https://www.youtube.com/watch?v=gV1fAvgHHhc) |
+| [![Full-length Dorito project explanation](docs/assets/demo-kinematics.webp)](https://www.youtube.com/watch?v=B4kNNsTJaLg) | [![Dorito prototype video 2](docs/assets/demo-steering.webp)](https://www.youtube.com/watch?v=usliYLL-PGs) | [![Dorito prototype video 3](docs/assets/demo-drive.webp)](https://www.youtube.com/watch?v=gV1fAvgHHhc) |
 
 ## Project principles
 
@@ -132,4 +132,3 @@ This repository currently documents the project. CAD, wiring diagrams, a bill of
 Dorito was designed and developed by **Angelo James Demetroulakos**.
 
 You may copy, modify, and redistribute this project under the [BSD 3-Clause License](LICENSE), provided that you retain the copyright notice, license conditions, and disclaimer. See [ATTRIBUTION.md](ATTRIBUTION.md) for a ready-to-use credit line.
-
