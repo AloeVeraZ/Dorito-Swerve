@@ -1,0 +1,11 @@
+cff-version: 1.2.0
+message: "If you use or build upon Dorito, please credit the project and its author."
+title: "Dorito: A Low-Cost Kiwi Swerve Drivetrain"
+type: software
+authors:
+  - family-names: "Demetroulakos"
+    given-names: "Angelo James"
+repository-code: "https://github.com/AloeVeraZ/Dorito-Swerve"
+url: "https://angelojamesny.com/dorito"
+license: BSD-3-Clause
+
