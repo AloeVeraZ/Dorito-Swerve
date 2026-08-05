@@ -1,26 +1,26 @@
 # Dorito
 
-## A low-cost, three-module Kiwi swerve drivetrain
+## A low cost, three module Kiwi swerve drivetrain
 
 <p align="center">
   <img src="docs/assets/dorito-prototype.jpg" alt="The Dorito Kiwi swerve drivetrain prototype" width="850">
 </p>
 
-**Dorito** is an experimental omnidirectional robot drivetrain designed by [Angelo James Demetroulakos](https://angelojamesny.com/). It explores a simpler and more accessible alternative to a conventional four-module swerve drive: three symmetrically arranged modules, affordable general-purpose parts, continuous-rotation servos for steering, and software-based closed-loop control.
+**Dorito** is an experimental omnidirectional robot drivetrain designed by [Angelo James Demetroulakos](https://angelojamesny.com/). It explores a simpler and more accessible alternative to a conventional four module swerve drive: three symmetrically arranged modules, affordable general purpose parts, continuous rotation servos for steering, and software based closed loop control.
 
-The goal is a drivetrain that is competitive enough for robotics, practical for assistive or general-purpose robots, inexpensive to repair, and useful as a platform for teaching mechanical design and control programming.
+The goal is a drivetrain that is competitive enough for robotics, practical for assistive or general purpose robots, inexpensive to repair, and useful as a platform for teaching mechanical design and control programming.
 
 > **Status:** Active prototype. The mechanical, electrical, and control systems are still being developed and tuned.
 
 ## The problem
 
-Traditional swerve drivetrains provide excellent traction and omnidirectional movement, but their cost and complexity can make them difficult to use outside well-funded teams. They commonly require four drive motors, four steering actuators, specialized mechanical components, substantial current, and time-consuming maintenance.
+Traditional swerve drivetrains provide excellent traction and omnidirectional movement, but their cost and complexity can make them difficult to use outside well funded teams. They commonly require four drive motors, four steering actuators, specialized mechanical components, substantial current, and time consuming maintenance.
 
 Dorito asks a different question: **how much of that performance can be retained with fewer actuators, common parts, and smarter software?**
 
 ## The approach
 
-Dorito uses a **Kiwi swerve** layout with three modules spaced symmetrically around the chassis. Compared with a typical four-module system, this removes one complete drive-and-steer pair while preserving full planar motion:
+Dorito uses a **Kiwi swerve** layout with three modules spaced symmetrically around the chassis. Compared with a typical four module system, this removes one complete drive and steer pair while preserving full planar motion:
 
 - translation forward and backward;
 - translation left and right;
@@ -28,26 +28,26 @@ Dorito uses a **Kiwi swerve** layout with three modules spaced symmetrically aro
 - rotation in place; and
 - combinations of translation and rotation.
 
-The design moves complexity away from specialized hardware and into feedback control. Each steering axis uses a continuous-rotation servo paired with an external encoder. The software continuously compares the requested and measured module angles, then corrects the steering command in real time.
+The design moves complexity away from specialized hardware and into feedback control. Each steering axis uses a continuous rotation servo paired with an external encoder. The software continuously compares the requested and measured module angles, then corrects the steering command in real time.
 
 ## How it works
 
 ### Mechanical system
 
-- Three-module, symmetric Kiwi layout for stable omnidirectional kinematics.
+- Three module, symmetric Kiwi layout for stable omnidirectional kinematics.
 - Stationary drive motors and steering servos while each wheel pod rotates freely.
-- **HTD5 belt** for the higher-load steering connection.
-- Lighter, lower-cost **HTD2 belt** for the drive connection.
-- General-purpose gears and bearings available from common suppliers.
-- A structure combining 3D-printed parts, CNC-machined plates, and standard hardware.
+- **HTD5 belt** for the higher load steering connection.
+- Lighter, lower cost **HTD2 belt** for the drive connection.
+- General purpose gears and bearings available from common suppliers.
+- A structure combining 3D printed parts, CNC machined plates, and standard hardware.
 - Modular construction intended to make damaged or worn components easier to replace.
 
 ### Electronics
 
 - Raspberry Pi as the main controller.
 - One 10 A motor driver for each drive motor.
-- Servo HAT for the continuous-rotation steering servos.
-- 12-bit encoder board for high-resolution, absolute steering feedback.
+- Servo HAT for the continuous rotation steering servos.
+- 12 bit encoder board for high resolution, absolute steering feedback.
 
 ### Software
 
@@ -55,7 +55,7 @@ The control software is written in Python and is responsible for:
 
 - converting translation and rotation commands into three module vectors;
 - selecting and tracking a target steering angle for each pod;
-- running closed-loop steering control from encoder feedback;
+- running closed loop steering control from encoder feedback;
 - synchronizing steering and drive outputs;
 - scaling motor commands to reduce unnecessary current draw; and
 - supporting rapid calibration and tuning without mechanical redesign.
@@ -76,7 +76,7 @@ flowchart LR
 
 ## Why three modules?
 
-Using three modules is the central tradeoff in the project. It reduces the number of motors, steering actuators, drivers, wiring runs, and mechanical assemblies by 25% compared with a four-module swerve. That lowers cost, current demand, weight, and maintenance burden.
+Using three modules is the central tradeoff in the project. It reduces the number of motors, steering actuators, drivers, wiring runs, and mechanical assemblies by 25% compared with a four module swerve. That lowers cost, current demand, weight, and maintenance burden.
 
 In return, the chassis geometry and kinematics must be accurate. Symmetry, encoder calibration, and coordinated control are especially important because software precision must make up for the reduced hardware count.
 
@@ -85,8 +85,8 @@ In return, the chassis geometry and kinematics must be accurate. Symmetry, encod
 The first prototype demonstrates the project's core ideas:
 
 - full omnidirectional movement with three modules;
-- lower part count and power demand than a four-module architecture;
-- smooth steering from continuous-rotation servos and encoder feedback;
+- lower part count and power demand than a four module architecture;
+- smooth steering from continuous rotation servos and encoder feedback;
 - use of inexpensive, widely available mechanical and electronic components; and
 - a practical foundation for further tuning, teaching, and experimentation.
 
@@ -94,14 +94,14 @@ The first prototype demonstrates the project's core ideas:
 
 Click a thumbnail to watch the original project video on YouTube.
 
-| Full-length project explanation | Prototype demo 2 | Prototype demo 3 |
+| Full length project explanation | Prototype demo 2 | Prototype demo 3 |
 |:---:|:---:|:---:|
 | [![Full-length Dorito project explanation](docs/assets/demo-kinematics.webp)](https://www.youtube.com/watch?v=B4kNNsTJaLg) | [![Dorito prototype video 2](docs/assets/demo-steering.webp)](https://www.youtube.com/watch?v=usliYLL-PGs) | [![Dorito prototype video 3](docs/assets/demo-drive.webp)](https://www.youtube.com/watch?v=gV1fAvgHHhc) |
 
 ## Project principles
 
 1. **Accessible parts:** Prefer components that teams, schools, and individual builders can obtain easily.
-2. **Software-defined precision:** Use sensing and closed-loop control in place of expensive positioning hardware where practical.
+2. **Software defined precision:** Use sensing and closed loop control in place of expensive positioning hardware where practical.
 3. **Low power and low part count:** Remove unnecessary actuators and scale outputs efficiently.
 4. **Maintainability:** Keep modules understandable, replaceable, and easy to iterate.
 5. **Educational value:** Make the mechanical and programming decisions visible enough to teach from.
