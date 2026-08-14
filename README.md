@@ -4,10 +4,10 @@
 
 ### A low cost, three module Kiwi swerve drivetrain
 
-[![Status](https://img.shields.io/badge/status-active_prototype-111111?style=for-the-badge)](#prototype-results)
-[![Drive](https://img.shields.io/badge/drive-three_module_Kiwi_swerve-3f3f46?style=for-the-badge)](#how-it-works)
-[![Control](https://img.shields.io/badge/control-closed_loop-6b7280?style=for-the-badge)](#software)
-[![Focus](https://img.shields.io/badge/focus-low_cost_accessibility-111111?style=for-the-badge)](#project-principles)
+[![Status](https://img.shields.io/badge/status-active_prototype-F59E0B?style=for-the-badge&labelColor=B45309)](#prototype-results)
+[![Drive](https://img.shields.io/badge/drive-three_module_Kiwi_swerve-00AEEF?style=for-the-badge&labelColor=0369A1)](#how-it-works)
+[![Control](https://img.shields.io/badge/control-closed_loop-8B5CF6?style=for-the-badge&labelColor=6D28D9)](#software)
+[![Focus](https://img.shields.io/badge/focus-low_cost_accessibility-22C55E?style=for-the-badge&labelColor=15803D)](#project-principles)
 
 [Overview](#overview) · [How it works](#how-it-works) · [Prototype results](#prototype-results) · [Project files](#repository-contents)
 
