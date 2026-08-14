@@ -1,10 +1,25 @@
+<div align="center">
+
 # Dorito
 
-## A low cost, three module Kiwi swerve drivetrain
+### A low cost, three module Kiwi swerve drivetrain
+
+[![Status](https://img.shields.io/badge/status-active_prototype-111111?style=for-the-badge)](#prototype-results)
+[![Drive](https://img.shields.io/badge/drive-three_module_Kiwi_swerve-3f3f46?style=for-the-badge)](#how-it-works)
+[![Control](https://img.shields.io/badge/control-closed_loop-6b7280?style=for-the-badge)](#software)
+[![Focus](https://img.shields.io/badge/focus-low_cost_accessibility-111111?style=for-the-badge)](#project-principles)
+
+[Overview](#overview) · [How it works](#how-it-works) · [Prototype results](#prototype-results) · [Project files](#repository-contents)
+
+</div>
 
 <p align="center">
   <img src="docs/assets/dorito-prototype.jpg" alt="The Dorito Kiwi swerve drivetrain prototype" width="850">
 </p>
+
+---
+
+## Overview
 
 **Dorito** is an experimental omnidirectional robot drivetrain designed by [Angelo James Demetroulakos](https://angelojamesny.com/). It explores a simpler and more accessible alternative to a conventional four module swerve drive: three symmetrically arranged modules, affordable general purpose parts, continuous rotation servos for steering, and software based closed loop control.
 
