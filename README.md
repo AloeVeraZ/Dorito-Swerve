@@ -4,10 +4,7 @@
 
 ### A low cost, three module Kiwi swerve drivetrain
 
-[![Status](https://img.shields.io/badge/status-active_prototype-F59E0B?style=for-the-badge&labelColor=B45309)](#prototype-results)
-[![Drive](https://img.shields.io/badge/drive-three_module_Kiwi_swerve-00AEEF?style=for-the-badge&labelColor=0369A1)](#how-it-works)
-[![Control](https://img.shields.io/badge/control-closed_loop-8B5CF6?style=for-the-badge&labelColor=6D28D9)](#software)
-[![Focus](https://img.shields.io/badge/focus-low_cost_accessibility-22C55E?style=for-the-badge&labelColor=15803D)](#project-principles)
+<img alt="Status: active prototype" src="https://img.shields.io/badge/status-active_prototype-F59E0B?style=for-the-badge&labelColor=B45309"> <img alt="Drive: three module Kiwi swerve" src="https://img.shields.io/badge/drive-three_module_Kiwi_swerve-00AEEF?style=for-the-badge&labelColor=0369A1"> <img alt="Control: closed loop" src="https://img.shields.io/badge/control-closed_loop-8B5CF6?style=for-the-badge&labelColor=6D28D9"> <img alt="Focus: low cost accessibility" src="https://img.shields.io/badge/focus-low_cost_accessibility-22C55E?style=for-the-badge&labelColor=15803D">
 
 [Overview](#overview) · [How it works](#how-it-works) · [Prototype results](#prototype-results) · [Project files](#repository-contents)
 
