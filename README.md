@@ -5,8 +5,8 @@
 ### A low-cost, 3-module holonomic swerve drivetrain with closed-loop continuous rotation steering
 
 [![Status](https://img.shields.io/badge/Status-Active_Prototype-22c55e?style=flat-square)](#overview)
-[![Kinematics](https://img.shields.io/badge/Kinematics-3--Module_Kiwi_Swerve-00aeef?style=flat-square)](#how-it-works)
-[![Control](https://img.shields.io/badge/Control-Closed--Loop_Python-8b5cf6?style=flat-square&logo=python&logoColor=white)](#software)
+[![Kinematics](https://img.shields.io/badge/Kinematics-3--Module_Kiwi_Swerve-00aeef?style=flat-square)](#the-approach)
+[![Control](https://img.shields.io/badge/Control-Closed--Loop_Python-8b5cf6?style=flat-square&logo=python&logoColor=white)](#electronics-and-control)
 [![License](https://img.shields.io/badge/License-BSD_3--Clause-f59e0b?style=flat-square)](LICENSE)
 
 <picture>
@@ -15,7 +15,8 @@
 
 An experimental omnidirectional robot platform engineered with 3 symmetric modules, commercial off-the-shelf components, continuous-rotation servos, and real-time encoder feedback.
 
-[Project Overview](#overview) | [Kinematic Architecture](#how-it-works) | [Software Control](#software) | [Prototype Results](#prototype-results) | [Project Videos](#videos) | [Portfolio](https://angelojamesny.com/dorito)
+<strong>Quick navigation:</strong><br>
+[Project Overview](#overview) | [Kinematic Architecture](#the-approach) | [Software Control](#electronics-and-control) | [Prototype Results](#prototype-results) | [Project Videos](#videos) | [Repository Files](#repository-contents)
 
 </div>
 
@@ -23,7 +24,7 @@ An experimental omnidirectional robot platform engineered with 3 symmetric modul
 
 ## Overview
 
-**Dorito** is an experimental omnidirectional robot drivetrain designed by [Angelo James Demetroulakos](https://angelojamesny.com/). It explores a simpler and more accessible alternative to conventional four-module swerve systems: three symmetrically arranged modules, affordable general-purpose parts, continuous rotation servos for steering, and software-based closed-loop control.
+**Dorito** is an experimental omnidirectional robot drivetrain that explores a simpler and more accessible alternative to conventional four-module swerve systems: three symmetrically arranged modules, affordable general-purpose parts, continuous rotation servos for steering, and software-based closed-loop control.
 
 The goal is a drivetrain that is competitive enough for competitive robotics, practical for assistive platforms, inexpensive to repair, and transparent for teaching mechanical design and feedback control.
 
@@ -48,19 +49,29 @@ Dorito uses a **Kiwi swerve** configuration with three modules spaced symmetrica
 - Independent in-place rotation
 - Simultaneous translation and rotational trajectory tracking
 
-```mermaid
-flowchart LR
-    A["Driver / Autonomous Command"] --> B["Python Kiwi Kinematics"]
-    B --> C["Target Module Velocity & Heading"]
-    C --> D["Closed-Loop Steering Controller"]
-    E["12-Bit Absolute Encoders"] --> D
-    D --> F["Servo HAT (CR Servos)"]
-    C --> G["10 A Motor Drivers"]
-    G --> H["Three Drive Motors"]
-    F --> I["Three Rotating Wheel Pods"]
-    H --> I
-    I --> E
-```
+<table>
+  <tr>
+    <td align="center"><strong>Driver or Autonomous Command</strong></td>
+    <td align="center">&rarr;</td>
+    <td align="center"><strong>Python Kiwi Kinematics</strong></td>
+    <td align="center">&rarr;</td>
+    <td align="center"><strong>Module Velocity and Heading Targets</strong></td>
+  </tr>
+  <tr>
+    <td align="center"><strong>12-Bit Absolute Encoders</strong></td>
+    <td align="center">&rarr;</td>
+    <td align="center"><strong>Closed-Loop Steering</strong></td>
+    <td align="center">&rarr;</td>
+    <td align="center"><strong>Servo HAT &rarr; Rotating Wheel Pods</strong></td>
+  </tr>
+  <tr>
+    <td align="center"><strong>Velocity Targets</strong></td>
+    <td align="center">&rarr;</td>
+    <td align="center"><strong>10 A Motor Drivers</strong></td>
+    <td align="center">&rarr;</td>
+    <td align="center"><strong>Three Drive Motors &rarr; Wheel Pods</strong></td>
+  </tr>
+</table>
 
 ## Subsystem Architecture
 
@@ -70,7 +81,7 @@ flowchart LR
 - **Dual Timing Belts:** HTD5 belts absorb high steering shock loads; lightweight HTD2 belts deliver drive torque.
 - **Hybrid Materials:** 3D-printed structural housings reinforced with CNC machined aluminum mounting plates.
 
-### Electronics & Control
+### Electronics and Control
 - **Raspberry Pi Host:** Computes inverse kinematics and steering vector resolution at high refresh rates.
 - **12-Bit Encoders:** Provide absolute angular position feedback directly at each module pivot axis.
 - **Current Scaling:** Software dynamically limits combined motor peak current to prevent battery voltage brownouts.
@@ -100,11 +111,3 @@ Click any preview to watch project demonstrations on YouTube:
 ├── LICENSE           # BSD 3-Clause license
 └── README.md         # Project documentation
 ```
-
----
-
-<div align="center">
-
-Designed and built by **[Angelo James Demetroulakos](https://angelojamesny.com/dorito)** · Available under the **[BSD 3-Clause License](LICENSE)**
-
-</div>

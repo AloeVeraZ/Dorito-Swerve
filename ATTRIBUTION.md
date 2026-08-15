@@ -6,7 +6,7 @@ Dorito is shared under the [BSD 3-Clause License](LICENSE). Copies and modified 
 
 Use the following credit in a README, documentation page, or other place where you describe the derived work:
 
-> Based on Dorito, a Kiwi swerve drivetrain designed by Angelo James Demetroulakos — https://angelojamesny.com/dorito
+> Based on Dorito, a Kiwi swerve drivetrain designed by Angelo James Demetroulakos — https://github.com/AloeVeraZ/Dorito-Swerve
 
 The license requires preservation of its notices. The credit line above is provided to make clear, human-readable attribution easy; it does not grant permission to imply that the original author endorses a derived project.
 
